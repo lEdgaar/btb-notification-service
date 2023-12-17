@@ -1,15 +1,15 @@
 package com.btb.notificationservice.dto;
 
 import com.btb.notificationservice.common.validation.annotations.NotNullOrEmpty;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+@ToString
 @Getter
 @Setter
-@AllArgsConstructor
+@EqualsAndHashCode
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class SendNotificationDTO {
 
     @NotNullOrEmpty
