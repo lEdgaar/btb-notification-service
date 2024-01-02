@@ -19,7 +19,7 @@ public class KafkaClassListener {
         log.trace("KafkaClassListener.sendNotification email: {}", sendNotificationDTO.getEmail());
 
         log.info("WarningEvent: Send notification by mail for user: {}", sendNotificationDTO.getEmail());
-        notificationService.sendNotification();
+        notificationService.sendNotification(sendNotificationDTO);
     }
 
 }
