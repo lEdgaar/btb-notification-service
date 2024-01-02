@@ -14,7 +14,7 @@ public class KafkaClassListener {
     @Autowired
     private NotificationService notificationService;
 
-    @KafkaListener(topics = KafkaConstants.NOTIFICATIONS_TOPIC + KafkaConstants.SEPARATOR + KafkaConstants.UNIT_AVAILABLE, groupId = "notifications")
+    @KafkaListener(topics = KafkaConstants.NOTIFICATIONS_TOPIC + KafkaConstants.SEPARATOR + KafkaConstants.GROUP_REQUEST, groupId = "notifications")
     void sendNotification(SendNotificationDTO sendNotificationDTO) {
         log.trace("KafkaClassListener.sendNotification email: {}", sendNotificationDTO.getEmail());
 
